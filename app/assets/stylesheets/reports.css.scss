@@ -1,3 +1,22 @@
 // Place all the styles related to the Reports controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.asc, .desc{
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  text-decoration: underline;
+  &:after{
+    background-image: asset_url("glyphicons-halflings.png", image);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 14px;
+    width: 14px;
+    content: '';
+  }
+}
+.asc:after{background-position: -289px -96px;}
+.desc:after{background-position: -312px -96px;}

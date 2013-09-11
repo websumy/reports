@@ -1,11 +1,11 @@
-p
-  b Name:
-  = best_in_place @report, :name
-p
-  b Description:
-  = best_in_place @report, :description, type: :textarea
-p
-  b Active:
-  = best_in_place @report, :active, type: :checkbox, :collection => ['True', 'False']
-= link_to 'Edit', edit_report_path(@report)
-= link_to 'Back', reports_path
+h3 Report
+dl.dl-horizontal
+  dt Name:
+  dd = best_in_place @report, :name
+  dt Description:
+  dd = best_in_place @report, :description, type: :textarea
+  dt Active:
+  dd = best_in_place @report, :active, type: :checkbox, :collection => ['True', 'False']
+= link_to 'Edit', edit_report_path(@report), class: 'btn btn-primary'
+| &nbsp;
+= link_to 'Back', reports_path, class: 'btn'
