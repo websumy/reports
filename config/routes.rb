@@ -1,6 +1,6 @@
 Reports::Application.routes.draw do
   authenticated :user do
-    root :to => 'reports#new'
+    root :to => 'reports#index'
   end
 
   devise_scope :user do
