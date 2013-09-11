@@ -4,7 +4,7 @@ table.table.table-hover
   thead
     tr
       th = sort_to 'name'
-      th = sort_to 'direction'
+      th = sort_to 'description'
       th = sort_to 'active'
       th = sort_to 'user'
       th
@@ -16,7 +16,7 @@ table.table.table-hover
         td = report.name
         td = report.description
         td = report.active
-        td = report.user.name
+        td =  link_to report.user.name, report.user
         td = link_to 'Show', report, class: 'btn btn-mini btn-success'
         td = link_to 'Edit', edit_report_path(report), class: 'btn btn-mini btn-primary'
         td = link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-mini btn-danger'
