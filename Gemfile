@@ -15,6 +15,7 @@ gem 'figaro'
 gem 'rolify'
 gem 'simple_form'
 gem 'slim'
+gem 'best_in_place'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

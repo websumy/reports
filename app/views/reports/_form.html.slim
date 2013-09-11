@@ -1,0 +1,5 @@
+= simple_form_for(@report) do |f|
+  = f.input :name
+  = f.input :description
+  = f.check_box :active
+  = f.button :submit, "Save report", :class => 'btn-primary'
