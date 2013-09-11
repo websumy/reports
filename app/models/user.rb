@@ -11,5 +11,12 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   has_many :reports
-  
+
+  before_create :set_default_role
+
+  private
+  def set_default_role
+    self.add_role :reporter
+  end
+
 end
