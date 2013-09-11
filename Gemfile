@@ -16,6 +16,7 @@ gem 'rolify'
 gem 'simple_form'
 gem 'slim'
 gem 'best_in_place'
+gem 'kaminari'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

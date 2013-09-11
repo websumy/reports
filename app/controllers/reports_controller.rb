@@ -3,6 +3,7 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
+    @reports = Report.page params[:page]
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @reports }
