@@ -1,8 +1,13 @@
 Reports::Application.routes.draw do
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'reports#new'
   end
-  root :to => "home#index"
+
+  devise_scope :user do
+    root :to => "devise/sessions#new"
+  end
+
   devise_for :users
   resources :users
+  resources :reports
 end
